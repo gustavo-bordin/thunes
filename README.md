@@ -10,26 +10,20 @@ The CLI was developed using the Bubbletea framework, which made it verbose due t
 
 I didn't have time to create extensive tests; I only created one for the API, which demonstrates how I would approach testing the rest of the code. Dependencies are injected into every piece of code, making it easier to test by mocking interfaces.
 
-# 2. Difficulties
-
-The first problem I encountered was creating a quotation. I attempted to send a currency that wasn't in my account, and the API error returned was misleading, stating that the payer wasn't activated in my account instead of indicating the currency issue. It took considerable time to understand the error, but eventually, fetching my balance data clarified that I should send the currency available in my wallet.
-
-The second problem arose from my choice of using the Bubbletea framework for the CLI. I regret this decision because the framework works in a cumbersome manner, making it challenging to maintain readable code while managing multiple states on the same screen. Extensive research was required, and I had to devise my own solution to support multiple screens, as this feature isn't documented in the framework and lacks discussion in forums, which simplified code maintenance.
-
-# 3. Diagram
+# 2. Diagram
 
 The following image illustrates the architecture of this solution and how the services interact with each other.
 
 ![Diagram](docs/diagram.png)
 
-# 4. Setup
+# 3. Setup
 
 ### Requirements:
 - Docker
 - Docker Compose
 - Ngrok free account (API TOKEN)
 
-### 4.1. Setup secrets
+### 3.1. Setup secrets
 
 Run the following command to create configuration files for the services:
 
@@ -43,24 +37,31 @@ You also need to export your Ngrok API token, which you can obtain from the Ngro
 $ export NGROK_AUTHTOKEN=<your_token_here>
 ```
 
-### 4.2. Build
+### 3.2. Build
 
 Use Docker Compose to build a Docker container for all services:
 
 ```bash
 make build
 ```
-### 4.3. Start
+### 3.3. Start
 Execute the following command to start the previously created containers:
 ```bash
 make start
 ```
 
-### 4.4. Test
+### 3.4. Test
 Run the following command to execute all tests. Note that the project is not fully covered:
 ```
 make tests
 ```
+
+
+# 4. Difficulties
+
+The first problem I encountered was creating a quotation. I attempted to send a currency that wasn't in my account, and the API error returned was misleading, stating that the payer wasn't activated in my account instead of indicating the currency issue. It took considerable time to understand the error, but eventually, fetching my balance data clarified that I should send the currency available in my wallet.
+
+The second problem arose from my choice of using the Bubbletea framework for the CLI. I regret this decision because the framework works in a cumbersome manner, making it challenging to maintain readable code while managing multiple states on the same screen. Extensive research was required, and I had to devise my own solution to support multiple screens, as this feature isn't documented in the framework and lacks discussion in forums, which simplified code maintenance.
 
 
 # 5. Feedback on Thunes
