@@ -1,0 +1,43 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: api
+    volumes:
+      - .:/app
+    ports:
+      - "8080:8080"
+
+  cli:
+    build:
+      context: .
+      dockerfile: Dockerfile.cli
+    container_name: cli
+    volumes:
+      - .:/app
+
+  tests:
+    build:
+      context: .
+      dockerfile: Dockerfile.tests
+    container_name: tests
+    volumes:
+      - .:/app
+
+  mongo:
+    image: mongo
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - .data:/data/db
+
+  ngrok:
+    image: ngrok/ngrok:alpine
+    container_name: ngrok
+    environment:
+      NGROK_AUTHTOKEN: ${NGROK_AUTHTOKEN}
+    command: 'http api:8080'
+    ports:
+      - '4040:4040'

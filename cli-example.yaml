@@ -1,0 +1,6 @@
+thunes:
+  username: <thunes_api_key>
+  password: <thunes_api_secret>
+mongo:
+  uri: mongodb://localhost:27017
+  dbname: states
