@@ -8,7 +8,7 @@ The API implementation is simple, without a complex structure like having a serv
 
 The CLI was developed using the Bubbletea framework, which made it verbose due to the nature of triggering and managing states within the framework. The result is an interactive UI that allows navigation through screens.
 
-I didn't have time to create extensive tests; I only created one for the API, which demonstrates how I would approach testing the rest of the code. Dependencies are injected into every piece of code, making it easier to test by mocking interfaces.
+I didn't have time to create extensive tests; I only created one for the API and one for Thunes client, which demonstrates how I would approach testing the rest of the code. Dependencies are injected into every piece of code, making it easier to test by mocking interfaces.
 
 # 2. Diagram
 
