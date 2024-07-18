@@ -68,7 +68,7 @@ The second problem arose from my choice of using the Bubbletea framework for the
 
 ### 5.1. Documentation
 
-I found it a bit difficult to navigate through the Thunes documentation. It resembles the documentation style of the Scrapy library, which isn't very effective for explaining an API.
+I found it a bit difficult to navigate through the Thunes documentation. It resembles the documentation style of the [Scrapy library](https://docs.scrapy.org/en/latest/), which isn't very effective for explaining an API.
 
 Finding the required endpoints was challenging, and excessive scrolling was required due to empty spaces.
 
