@@ -81,3 +81,12 @@ The payment process with Thunes involved several steps (getting payer ID, creati
 During development, I encountered inconsistencies. For instance, when creating a transaction, the returned object includes status and status_class as strings. However, when receiving callbacks, these fields are returned as numbers. Additionally, there's no validation to ensure that the external_id in the transaction matches the one in the quotation, which seems inconsistent.
 
 Thunes could benefit from having an endpoint to retrieve all transaction states without needing to rely solely on callbacks. Although such an endpoint exists, it only returns the last state, which complicates solution architecture and increases complexity.
+
+# 6. Ideas to improve
+
+- Add tests for all modules
+- Use a library to automatically mock interfaces so it gets easier to write tests
+- Encrypt transaction state before saving into MongoDB
+- Define a pattern on all the screens so it gets easier to write components and let the UI code more readable.
+- Add checks to the UI so it does not break in case the user send inputs before loading
+- Let the user customize more the transaction payload (e.g names and documents)
