@@ -21,7 +21,7 @@ The following image illustrates the architecture of this solution and how the se
 ### Requirements:
 - Docker
 - Docker Compose
-- Ngrok free account (API TOKEN)
+- [Ngrok free account (API TOKEN)](https://dashboard.ngrok.com/signup)
 
 ### 3.1. Setup secrets
 
