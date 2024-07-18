@@ -28,7 +28,7 @@ The following image illustrates the architecture of this solution and how the se
 Run the following command to create configuration files for the services:
 
 ```bash
-$ cp api-example.yaml api.yaml && cp cli-exmaple.yaml cli.yaml
+$ cp api-example.yaml api.yaml && cp cli-example.yaml cli.yaml
 ```
 After running the command above, open the created files and fill them with your secret keys.
 
